@@ -1,0 +1,378 @@
+:root {
+    --primary: #181C14;
+    --primary: #000000;
+    --secondary: #ff6e42;
+    /* --secondary: #2c2e35; */
+    --third: #697565;
+    --text: #ffffff;
+}
+
+body {
+    padding: 0px;
+    margin:0px;
+
+    background-color: var(--primary);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 400vh;
+}
+
+.btn {
+    padding:10px;
+    color: var(--secondary);
+    text-decoration: none;
+    border:1px solid var(--secondary);
+    border-radius: 20px;
+    text-align: center;
+}
+.btn:hover {
+    box-shadow: 0px 0px 10px var(--secondary);
+    filter: contrast(2);
+}
+
+
+#main-nav {
+    position:sticky;
+    z-index: 1;
+    top:10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right:20px;
+
+    width:90%;
+    max-width: 1500px;
+    height:70px;
+    border-radius:10px;
+    margin:auto;
+    background-color: var(--primary);
+    /* background-color: yellow; */
+
+}
+
+.scrolled {
+    box-shadow: 0px 0px 20px rgba(78, 72, 72, 0.733);
+    transition: box-shadow 0.5s linear;
+}
+
+#main-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: clamp(300px, 50%, 600px);
+    height:100%;
+    list-style-type: none;
+    /* background-color: red; */
+}
+
+#main-nav a {
+    font-size: clamp(0.8em, 3vw, 1.5em);
+    color: white;
+    text-decoration: none;
+    padding:10px;
+    /* background-color: red; */
+}
+
+#main-nav a:hover:not(#logo, #contact) {
+    border-bottom: 2px solid var(--secondary);
+    color:rgb(255, 220, 173)
+}
+
+#main-nav #logo {
+    position: absolute;
+    left:20px;
+    top:0px;
+}
+#main-nav #logo:hover {
+    filter:contrast(5)
+}
+
+#main-nav #contact {
+    background-color: var(--secondary);
+    color:white;
+    font-weight: 900;
+    border-radius: 10px;
+}
+#main-nav #contact:hover {
+    background-color: white;
+    box-shadow: 0px 0px 20px white;
+    color: black;
+    transition: 0.5s all;
+}
+
+
+
+
+
+#atf {
+    position: relative;
+    margin:50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    /* background-color: #800080; */
+    width: clamp(300px, 80%, 1400px);
+    height:70vh;
+}
+
+#atf h1 {
+    width:clamp(350px, 60%, 800px);
+    font-size: clamp(2rem, 4vw, 4rem);
+    /* background-color: rgb(1, 136, 1); */
+    margin-bottom:10px;
+}
+
+#atf p {
+    width:clamp(320px, 55%, 700px);
+    min-width: 250px;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    color:rgb(216, 216, 216);
+    /* background-color: rgb(0, 128, 0); */
+    margin-bottom:40px;
+}
+
+#atf a {
+    position: relative;
+    border: 1px solid var(--secondary);
+    padding: 10px 50px 10px 10px;
+    border-radius: 20px;
+    background-color: #ff6e4225;
+    color: var(--text);
+    text-decoration: none;
+}
+#atf a:hover {
+    box-shadow: 0px 0px 10px var(--secondary);
+    
+}
+
+#atf #arrow {
+    width:25px;
+    height:25px;
+    position: absolute;
+    top:5px;
+    right:15px;
+    border: 1px solid var(--secondary);
+    border-radius: 50%;
+}
+
+#atf > img {
+    position:absolute;
+    top:0px;
+    right:0px;
+    z-index: -1;
+    object-fit: cover;
+    filter: brightness(0.8);
+    
+    height:100%;
+    width: clamp(300px, 60%, 700px);
+}
+
+
+
+
+
+#work-section {
+    /* background-color:  red; */
+    width: clamp(200px, 90%, 1400px);
+    margin:auto;
+}
+
+#wcard-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    /* background-color:  blue; */
+    width:100%;
+}
+
+.wcard {
+    width: clamp(300px, 30%, 500px);
+    height: 400px;
+    /* background-color: #71c919; */
+    margin:20px;
+}
+.wcard:hover {
+    cursor:pointer;
+    filter: brightness(1.3);
+}
+
+
+.wcard img {
+    width:100%;
+    height:80%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    border:1px solid #80808050;
+    box-shadow: 0px 0px 45px #80808050;
+}
+
+#work-section a {
+    display: block;
+    margin:auto;
+    width:150px;
+}
+
+#third-wc {
+    display: none;
+}
+
+
+
+
+
+#habout {
+    background-color: var(--secondary);
+    background-color: #ff6e4230;
+    position: relative;
+}
+
+#habout h2 {
+    position: absolute;
+    left:50%;
+    transform: translate(-50%, 0%);
+}
+
+#habout-cont {
+    width:80%;
+    margin:100px auto;
+    padding:80px 0px 50px;
+    display: flex;
+}
+
+#habout p {
+    font-size: clamp(1em, 2vw, 1.5em);
+}
+
+#habout img {
+    width:50%;
+    margin-right:30px;
+    object-fit: cover;
+    padding-bottom: 20px;
+}
+
+#habout a {
+    color: rgb(0, 47, 255);
+    padding:10px;
+}
+#habout a:hover {
+    color: rgb(174, 0, 255);
+}
+
+#habout-cont div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+
+
+#skills-tech {
+    background-color: blue;
+    width: clamp(350px, 80vw, 500px);
+    margin:auto;
+}
+
+#skills-tech h2 {
+    position: relative;
+}
+
+#skills-tech .category-cont {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    gap:20px;
+
+    /* background-color: yellow; */
+    margin-top: 70px;
+}
+
+#skills-tech h3 {
+    /* background-color: orange; */
+    position: absolute;
+    top:-50px;
+}
+
+
+#skills-tech .category-cont .card{
+    background-color: #49494944;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 20px #5e5e5e50; */
+    /* margin: 0px 10px; */
+    text-align: center;
+    width:100px;
+}
+
+#skills-tech .card p {
+    margin: 0px;
+    /* background-color: gold; */
+}
+
+
+#skills-tech img {
+    width:50px;
+    /* background-color: red; */
+}
+
+#express-js {
+    box-sizing: content-box;
+    width:26px !important;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    margin:2px ;
+}
+
+#github-logo {
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:500px) {
+    #main-nav ul{
+        justify-content: flex-end;
+    }
+
+    .scrolled {
+        box-shadow: 0px 0px 20px rgba(56, 52, 52, 0.932);
+    }
+
+}
+
+@media only screen and (max-width:800px) {
+    #habout-cont {
+        display: block;
+    }
+
+    #habout img {
+        width: 80%;
+        margin: auto;
+        display: block;
+    }
+}
+
+
+@media only screen and (max-width:1350px) and (min-width:800px) {
+
+    #third-wc {
+        display: block;
+    }
+
+}
