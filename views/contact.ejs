@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Contact | Markos Souchlakis</title>
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="icon" type="image/png" href="/icons/icons8-maxcdn-48.png">
+</head>
+    <body>
+    
+        <%- include('partials/nav') %>
+
+        <div class="header">
+            <div class="header-h1">
+                <h1>Contact Me</h1>
+            </div>
+            <div class="header-p">
+                <p>I’d love to hear from you! Whether you have a question, a project idea, or just want to say hello, feel free to drop me a message</p>
+            </div>
+        </div>
+
+        <%- include('partials/contact') %>
+        
+        <%- include('partials/footer') %>
+
+        <script>
+    
+    
+            let nav = document.querySelector('#main-nav');
+            let contact = document.querySelector('#contact');
+            contact.style.backgroundColor = "white";
+            contact.style.color = "black";
+            contact.style.fontWeight = "900";
+            contact.style.boxShadow = "0px 0px 10px white";
+    
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 200) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
+    
+    
+        </script>
+
+    </body>
+</html>

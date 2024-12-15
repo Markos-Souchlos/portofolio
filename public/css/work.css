@@ -1,0 +1,75 @@
+:root {
+    --primary: #181C14;
+    --primary: #000000;
+    --secondary: #ff6e42;
+    /* --secondary: #2c2e35; */
+    --third: #697565;
+    --text: #ffffff;
+}
+
+
+article {
+    margin: 200px 0px;
+}
+
+.work-card {
+    /* background-color: red; */
+    padding: 30px;
+    width: 80%;
+    height:clamp(200px, 30vw, 400px);
+    max-width: 1000px;
+    margin: 150px auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap:20px;
+}
+.work-card:hover {
+    background-color: rgb(15, 15, 15);
+    cursor: pointer;
+}
+
+#wc3 img {
+    object-position: center;
+}
+
+.work-card .wimg-container {
+    /* box-shadow: 0px 0px 20px rgba(128, 128, 128, 0.322); */
+    width: clamp(200px, 60%, 800px);
+}
+
+.work-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.work-card .info {
+    /* background-color: rgba(59, 88, 88, 0.707); */
+    width:300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.work-card .info h2 {
+    font-size: clamp(20px, 2vw, 30px);
+}
+
+.work-card .info h2, .work-card .info p {
+    /* background-color: green; */
+    margin-top: 0px ;
+}
+
+.work-card .info p {
+    color:#b1b1b1
+}
+
+.work-card .info a {
+    color:white;
+    text-decoration: none;
+    border:1px solid white;
+    padding:5px;
+    width: min-content;
+}

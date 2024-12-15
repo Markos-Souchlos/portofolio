@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#181C14" />
+    <meta name="google" content="notranslate">
     <title>Web Developer Portofolio</title>
     <link rel="stylesheet" href="css/home.css" />
+    <link rel="icon" type="image/png" href="/icons/icons8-maxcdn-48.png">
 </head>
 <body>
     
-    <%- include('partials/header') %>
+    <%- include('partials/nav') %>
 
     <article>
 
@@ -18,38 +20,43 @@
             <p>I create websites that captivate with beautiful aesthetics while strategically driving meaningful actions to achieve your business goals.</p>
             <a href="/contact">
                 Contact me 
-                <img src="/icons8-right-arrow-64.png" id="arrow" alt="arrow" />
+                <img src="assets/icons8-right-arrow-64.png" id="arrow" alt="arrow" />
             </a>
-            <img src="/hamed-foroutan-8WsfFDuK1l0-unsplash.jpg" alt="profile picture" />
+            <img src="assets/hamed-foroutan-8WsfFDuK1l0-unsplash.jpg" alt="profile picture" />
         </section>
     
         <section id="work-section">
             <h2>Featured Work</h2>
             <div id="wcard-container">
-                <div class="wcard">
-                    <img src="/gym-aiantas.png" alt="gym project">
-                    <p>Gym website Aiantas</p>
+
+                <div class="wcard" onclick="clickHREF(this)">
+                    <img src="assets/gym-aiantas.png" alt="gym project">
+                    <a href="/work/aiantas" target="_blank">Gym website Aiantas</a>
                 </div>
-                <div class="wcard">
-                    <img src="/restaurant-kappari.png" alt="restaurant project">
-                    <p>Restaurant Kappari</p>
+                
+                <div class="wcard" onclick="clickHREF(this)">
+                    <img src="assets/restaurant-kappari.png" alt="restaurant project">
+                    <a href="/work/kappari" target="_blank">Restaurant Kappari</a>
                 </div>
-                <div class="wcard">
-                    <img src="nutrition-tracker.jpg" alt="macros tracker project">
-                    <p>Macros tracker</p>
+                
+                <div class="wcard" onclick="clickHREF(this)">
+                    <img src="assets/nutrition-tracker.jpg" alt="macros tracker project">
+                    <a href="/work/macros-tracker" target="_blank">Macros tracker</a>
                 </div>
-                <div class="wcard" id="third-wc">
-                    <img src="meal-planner.png" alt="meal planner project">
-                    <p>Meal Planner</p>
+                
+                <div class="wcard" id="third-wc" onclick="clickHREF(this)">
+                    <img src="assets/meal-planner.png" alt="meal planner project">
+                    <a href="/work/meal-planner" target="_blank">Meal Planner</a>
                 </div>
+            
             </div>
-            <a class="btn" href="/work">See All Projects</a>
+            <a id="see-all-projects" class="btn" href="/work">See All Projects</a>
         </section>
     
         <section id=habout>
             <h2>About Mark</h2>
             <div id="habout-cont">
-                <img src="/me-coding.jpg" alt="me coding" />
+                <img src="assets/me-coding.jpg" alt="me coding" />
                 <div>
                     <p>I’m a 21-year-old Computer Science student from Greece, currently in my final year at university. I’m passionate about building modern, user-friendly websites and continuously improving my skills in web development. </p>
                     <p>Outside of coding, I enjoy working out to stay active, experimenting with cooking, and indulging in the excitement of airsoft.</p>
@@ -91,18 +98,18 @@
                     <p>express.js</p>
                 </div>
                 <div class="card">
-                    <img src="/Oauth_logo.svg" id="oauth" alt="oauth-logo">
+                    <img src="assets/Oauth_logo.svg" id="oauth" alt="oauth-logo">
                     <p>Oauth</p>
                 </div>
                 <div class="card">
-                    <img src="/icons8-postgresql-100.png" alt="postgresql-logo">
+                    <img src="assets/icons8-postgresql-100.png" alt="postgresql-logo">
                     <p>Postgresql</p>
                 </div>
             </div>
             <div class="category-cont">
                 <h3>Tools</h3>
                 <div class="card">
-                    <img src="/icons8-git-48.png" alt="git-logo">
+                    <img src="assets/icons8-git-48.png" alt="git-logo">
                     <p>git</p>
                 </div>
                 <div class="card">
@@ -141,34 +148,17 @@
 
     </article>
 
-    <!-- <div id="contact">
-        <form action="/send" method="post">
-            <h2>CONTACT ME</h2>
-            <p>Dont be shy, do the first move!</p>
-            <div id="inp-cont">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="text" placeholder="Message">
-            </div>
-            <input type="submit" value="Send" />
-        </form>
-    </div> -->
+    <%- include('partials/contact') %>
 
-    <div id="contact-form">
-        <div id="lcd">
-            <h2>CONTACT ME</h2>
-            <p>Have any questions or want to talk about a project? Send me a message : )</p>
-        </div>
-        <form action="/send" method="post">
-            <label for="name">Name</label>
-            <input type="text" id="name">
-            <label for="email">Email</label>
-            <input type="text" id="email">
-            <label for="message">Message</label>
-            <input type="text" id="message">
-            <input id="hbtn" type="submit" value="Send">
-        </form>
-    </div>
+    <%- include('partials/footer') %>
+
+
+    
+
+
+
+
+
 
 
     <script>
@@ -176,6 +166,7 @@
         // setInterval(() => {
         //     window.location.reload();
         // }, 1000 * 10); 
+
 
         let nav = document.querySelector('#main-nav');
         document.querySelector('#home').style.borderBottom = "2px solid #ff6e42"
@@ -186,9 +177,11 @@
             } else {
                 nav.classList.remove('scrolled');
             }
-        })
+        });
 
-
+        function clickHREF(card) {
+                card.children[1].click();
+            }
 
 
     </script>
