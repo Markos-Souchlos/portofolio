@@ -25,7 +25,7 @@ article {
     gap:20px;
 }
 .work-card:hover {
-    background-color: rgb(15, 15, 15);
+    background-color: rgb(20, 20, 20);
     cursor: pointer;
 }
 

@@ -171,6 +171,10 @@
         let nav = document.querySelector('#main-nav');
         document.querySelector('#home').style.borderBottom = "2px solid #ff6e42"
 
+        document.querySelector('#top').addEventListener('click', () => {
+            window.scrollTo({top:0, behavior:'smooth'});
+        });
+
         window.addEventListener("scroll", () => {
             if (window.scrollY > 200) {
                 nav.classList.add('scrolled');
@@ -181,7 +185,7 @@
 
         function clickHREF(card) {
                 card.children[1].click();
-            }
+        }
 
 
     </script>

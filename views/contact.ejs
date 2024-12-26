@@ -26,26 +26,31 @@
         
         <%- include('partials/footer') %>
 
-        <script>
-    
-    
-            let nav = document.querySelector('#main-nav');
-            let contact = document.querySelector('#contact');
-            contact.style.backgroundColor = "white";
-            contact.style.color = "black";
-            contact.style.fontWeight = "900";
-            contact.style.boxShadow = "0px 0px 10px white";
-    
-            window.addEventListener("scroll", () => {
-                if (window.scrollY > 200) {
-                    nav.classList.add('scrolled');
-                } else {
-                    nav.classList.remove('scrolled');
-                }
-            });
-    
-    
-        </script>
+    <script>
+
+
+        let nav = document.querySelector('#main-nav');
+        let contact = document.querySelector('#contact');
+        contact.style.backgroundColor = "white";
+        contact.style.color = "black";
+        contact.style.fontWeight = "900";
+        contact.style.boxShadow = "0px 0px 10px white";
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 200) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        
+        document.querySelector('#top').addEventListener('click', () => {
+            window.scrollTo({top:0, behavior:'smooth'});
+        });
+
+
+    </script>
 
     </body>
 </html>

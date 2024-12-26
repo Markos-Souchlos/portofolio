@@ -56,7 +56,7 @@
                     <h2>03</h2>
                     <h2>Macros Tracker</h2>
                     <p>You can easily track your macros and calories</p>
-                    <a href="/work/macros-tracker">VIEW</a>
+                    <a href="/work/macros-tracker" target="_blank">VIEW</a>
                 </div>
             </div>
 
@@ -68,19 +68,7 @@
                     <h2>04</h2>
                     <h2>Meal planner</h2>
                     <p>You can calculate you basic BRM, BMI, calories, macros and many more!</p>
-                    <a href="/work/meal-planner">VIEW</a>
-                </div>
-            </div>
-
-            <div class="work-card" onclick="clickView(this)" >
-                <div class="wimg-container">
-                    <img src="/assets/gym-aiantas.png" alt="Gym Website">
-                </div>
-                <div class="info">
-                    <h2>04</h2>
-                    <h2>Gym Aiantas</h2>
-                    <p>A website for a small gym at the center of Kavala that I used to go</p>
-                    <a href="fbw">VIEW</a>
+                    <a href="/work/meal-planner" target="_blank">VIEW</a>
                 </div>
             </div>
 
@@ -91,26 +79,32 @@
         <%- include('partials/footer') %>
 
 
-        <script>
-    
-    
-            let nav = document.querySelector('#main-nav');
-            document.querySelector('#work').style.borderBottom = "2px solid #ff6e42"
-    
-            window.addEventListener("scroll", () => {
-                if (window.scrollY > 200) {
-                    nav.classList.add('scrolled');
-                } else {
-                    nav.classList.remove('scrolled');
-                }
-            });
+    <script>
 
-            function clickView(card) {
-                card.children[1].children[3].click();
+
+        let nav = document.querySelector('#main-nav');
+        document.querySelector('#work').style.borderBottom = "2px solid #ff6e42"
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 200) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
             }
-    
-    
-        </script>
+        });
+
+        
+        document.querySelector('#top').addEventListener('click', () => {
+            window.scrollTo({top:0, behavior:'smooth'});
+        });
+        
+
+        function clickView(card) {
+            card.children[1].children[3].click();
+        }
+
+
+    </script>
 
     </body>
 </html>

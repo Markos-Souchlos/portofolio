@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 
 const app = express();
 const port = 3000;
-const myIP = '192.168.1.25'
+const myIP = '192.168.1.11'
 const companyEmail = 'markosouxlos@gmail.com';
 
 app.use(express.static("public"));
@@ -38,6 +38,9 @@ app.get("/work/aiantas", (req,res) => {
 });
 app.get("/work/meal-planner", (req,res) => {
     res.redirect(`http://${myIP}:5500`);
+});
+app.get("/work/macros-tracker", (req,res) => {
+    res.redirect(`http://${myIP}:5550`);
 });
 
 

@@ -22,26 +22,48 @@
             </div>
         </div>
 
+
+        <article>
+            <img src="/assets/1-intro-photo-final.jpg" alt="me" id="me-img1" >
+            <section>
+                <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab distinctio nesciunt commodi est ad magni, exercitationem tempora dolores quo ex quas nisi rem vitae nobis!</p>
+                <p>Culpa ratione obcaecati cupiditate optio quibusdam nihil tenetur aperiam soluta hic impedit. Illum, minima laborum? Cum mollitia error molestias? Possimus nemo cum corrupti voluptates provident!</p>
+                <p>Ratione fugiat maiores culpa commodi debitis modi vel deserunt molestias quae odit nulla dolore sint aliquam est ducimus, praesentium voluptatem repellat facere nihil beatae. Similique!</p>
+            </section>
+        </article>
+
+
         <%- include('partials/contact') %>
         
         <%- include('partials/footer') %>
 
-        <script>
-    
-    
-            let nav = document.querySelector('#main-nav');
-            document.querySelector('#about').style.borderBottom = "2px solid #ff6e42"
-    
-            window.addEventListener("scroll", () => {
-                if (window.scrollY > 200) {
-                    nav.classList.add('scrolled');
-                } else {
-                    nav.classList.remove('scrolled');
-                }
-            });
-    
-    
-        </script>
+    <script>
+
+
+        let nav = document.querySelector('#main-nav');
+        document.querySelector('#about').style.borderBottom = "2px solid #ff6e42"
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 200) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+                
+        document.querySelector('#top').addEventListener('click', () => {
+            window.scrollTo({top:0, behavior:'smooth'});
+        });
+
+
+        document.querySelector('#top').addEventListener('click', () => {
+            window.scrollTo({top:0, behavior:'smooth'});
+        });
+
+
+    </script>
         
     </body>
 </html>

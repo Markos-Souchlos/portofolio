@@ -1,0 +1,35 @@
+article {
+    width:80%;
+    max-width: 1200px;
+    margin:auto;
+    /* background-color: red; */
+}
+
+#me-img1 {
+    width:50%;
+    min-width: 330px;
+    float: left;
+    padding-right:50px;
+    padding-bottom: 50px;
+}
+
+article h2 {
+    line-height: 1.4;
+    font-size: clamp(25px, 3vw, 35px);
+}
+
+article p {
+    line-height: 1.6;
+    font-size: clamp(17px, 1.6vw, 23px);
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width:900px) {
+
+    #me-img1 {
+        float: none;
+        width:100%;
+        margin: auto;
+    }
+
+}
