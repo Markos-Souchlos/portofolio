@@ -29,19 +29,6 @@ app.get("/contact", (req,res) => {
 });
 
 
-// Rerirect
-app.get("/work/kappari", (req,res) => {
-    res.redirect(`http://${myIP}:5000`);
-});
-app.get("/work/aiantas", (req,res) => {
-    res.redirect(`http://${myIP}:80`);
-});
-app.get("/work/meal-planner", (req,res) => {
-    res.redirect(`http://${myIP}:5500`);
-});
-app.get("/work/macros-tracker", (req,res) => {
-    res.redirect(`http://${myIP}:5550`);
-});
 
 
 
@@ -94,5 +81,5 @@ app.use((req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server is up and running on port ${port}`);
+    console.log(`Server is up and running on http://localhost:${port}`);
 });

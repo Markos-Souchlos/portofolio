@@ -23,47 +23,88 @@
         </div>
 
 
-        <article>
-            <img src="/assets/1-intro-photo-final.jpg" alt="me" id="me-img1" >
-            <section>
-                <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab distinctio nesciunt commodi est ad magni, exercitationem tempora dolores quo ex quas nisi rem vitae nobis!</p>
-                <p>Culpa ratione obcaecati cupiditate optio quibusdam nihil tenetur aperiam soluta hic impedit. Illum, minima laborum? Cum mollitia error molestias? Possimus nemo cum corrupti voluptates provident!</p>
-                <p>Ratione fugiat maiores culpa commodi debitis modi vel deserunt molestias quae odit nulla dolore sint aliquam est ducimus, praesentium voluptatem repellat facere nihil beatae. Similique!</p>
+        <main>
+            <section id="s1">
+
+                <div id="me-img1">
+                    <img src="/assets/1739023116925.jpg" alt="me" >
+                </div>
+                <h2>Hey! I'm Mark 👋</h2>
+                <p>I'm a passionate web developer currently in my final year at university. My journey with programming started when I was 16, I didn’t like it at first, but over time, I started building projects for fun, and I absolutely fell in love with it.</p>
+                <p>My mission is to create impactful and efficient web applications while constantly improving my skills. I thrive on problem-solving and bringing ideas to life through code.</p>
+                <hr />
+                <h2>💻 My Tech Stack</h2>
+                <ul>
+                    <li><strong>Frontend:</strong> JavaScript, HTML, CSS</li>
+                    <li><strong>Backend:</strong> Node.js, Express, RESTful APIs</li>
+                    <li><strong>Databases:</strong> PostgreSQL</li>
+                    <li><strong>Other Tools:</strong> Git & version control, Linux command line</li>
+                </ul>
+
             </section>
-        </article>
+
+            <section id="s2">
+                
+                
+                <div>
+                    <div>
+                        <img src="/assets/Screenshot from 2025-02-08 16-31-09.png" alt="">
+                    </div>
+                    <div>
+                        <p>Technology is constantly evolving, and I strive to keep up with the latest trends. Whether it's learning a new framework, improving my coding practices, or optimizing performance, I am always eager to grow as a developer.</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="/assets/Screenshot from 2025-02-08 17-47-34.png" alt="">
+                    </div>
+                    <div>
+                        <p>Over the years, I have experimented with various technologies, from frontend development to backend solutions. Each project I work on helps me learn something new and refine my skills. I enjoy tackling challenges and finding elegant solutions to complex problems.</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="/assets/IMG_20230227_064442.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>When I’m not coding, I love spending time outdoors. Camping is my favourite hobby. Bodybuilding is another passion of mine, helping me stay disciplined and push my physical limits. Additionally, I enjoy hiking, which gives me the opportunity to explore new landscapes and clear my mind.</p>
+                    </div>
+                </div>
+
+            </section>
+        </main>
 
 
         <%- include('partials/contact') %>
         
         <%- include('partials/footer') %>
 
-    <script>
+        <script>
 
 
-        let nav = document.querySelector('#main-nav');
-        document.querySelector('#about').style.borderBottom = "2px solid #ff6e42"
+            let nav = document.querySelector('#main-nav');
+            document.querySelector('#about').style.borderBottom = "2px solid #ff6e42"
 
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 200) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-        });
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 200) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
 
-                
-        document.querySelector('#top').addEventListener('click', () => {
-            window.scrollTo({top:0, behavior:'smooth'});
-        });
-
-
-        document.querySelector('#top').addEventListener('click', () => {
-            window.scrollTo({top:0, behavior:'smooth'});
-        });
+                    
+            document.querySelector('#top').addEventListener('click', () => {
+                window.scrollTo({top:0, behavior:'smooth'});
+            });
 
 
-    </script>
+            document.querySelector('#top').addEventListener('click', () => {
+                window.scrollTo({top:0, behavior:'smooth'});
+            });
+
+
+        </script>
         
     </body>
 </html>
