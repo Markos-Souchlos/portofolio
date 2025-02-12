@@ -33,7 +33,7 @@ body {
 
 
 .header {
-    background-color: red;
+    /* background-color: red; */
     text-align: center;
     margin-top:20px;
     margin-bottom: 200px;
@@ -643,7 +643,29 @@ footer hr {
     #skills-tech .category-cont {
         gap:15px;
     }
-    
+
+    #atf {
+        margin: 0px auto 100px;
+    }
+
+    #atf h1 {
+        font-size: 22px;
+    }
+
+    #atf p {
+        font-size: 14px;
+    }
+
+    #atf > img {
+        width:200px;
+        height:300px;
+        margin: 150px 0px 0px 40px;
+    }
+
+    #atf a {
+        margin-top: 100px;
+    }
+
 }
 
 @media only screen and (max-width:800px) {
