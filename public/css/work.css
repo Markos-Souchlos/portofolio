@@ -45,6 +45,11 @@ article {
     object-position: top;
 }
 
+small {
+    color: gray;
+    margin-bottom: 10px;
+}
+
 .work-card .info {
     /* background-color: rgba(59, 88, 88, 0.707); */
     width:300px;
